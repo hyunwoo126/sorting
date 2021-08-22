@@ -20,6 +20,7 @@ function insertionSort(arr) {
  * stable (keeps ordering of duplicates)
  * good for nearly sorted data
  * space complexity: O(1)
+ * time complexity: worst case O(n**2)
 */
 
 console.log(insertionSort([5,4,3,2,1]));
