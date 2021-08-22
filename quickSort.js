@@ -8,10 +8,16 @@ var sortArray = function(nums) {
     }
     
     function choosePivot(left, right) {
+        // choose middle
         const pivot = Math.floor((left+right)/2);
         const pivotVal = nums[pivot];
+        // move pivot to the right end
         swap(pivot, right);
         return pivotVal;
+
+        // or simply just use the end num as pivot to make life easier
+        // but this exceeds time limit when submitting on leetcode
+        return nums[right];
     }
     
     function quickSort(leftBound, rightBound) {
@@ -38,7 +44,6 @@ var sortArray = function(nums) {
         
         quickSort(leftBound, i);
         quickSort(i+2, rightBound);
-        
     }
     
     quickSort(0, nums.length-1);
